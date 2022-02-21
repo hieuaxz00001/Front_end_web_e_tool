@@ -1,0 +1,22 @@
+[
+    {
+        "ten_tram":"tram 1",
+        "ngay_tao":"2022-02-13",
+        "ghi_chu":"tram1",
+        "latitute":"",
+        "longtite":"",
+        "ma_tram":"",
+        "id":"",
+        "noi_dung":""
+    },
+    {
+        "ten_tram":"",
+        "ngay_tao":"",
+        "ghi_chu":"",
+        "latitute":"",
+        "longtite":"",
+        "ma_tram":"",
+        "id":"",
+        "noi_dung":""
+    }
+]

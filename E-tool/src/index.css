@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.my-modal {
+  width: 90vw!important;   /* Occupy the 90% of the screen width */
+  max-width: 90vw!important;
+} 
+.my-modal-phieu-ks {
+  width: 40vw!important;   /* Occupy the 90% of the screen width */
+  max-width: 40vw!important;
+} 
+.fas,.far{
+  font-size: 0.9em;
+}

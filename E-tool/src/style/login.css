@@ -1,0 +1,27 @@
+.bg-blue {
+  background-color: #ceffdc;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.cl-white {
+  color: white;
+}
+
+.text-green {
+  color: #21bd4f;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ceffdc;
+}
+
+.block-login .block-login_right {
+  background: url('./../image/Artboard 2.png');
+  background-size: cover;
+}

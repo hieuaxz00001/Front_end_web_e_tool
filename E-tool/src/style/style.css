@@ -194,9 +194,8 @@ ul ul a {
   width: 93%;
   margin: 0px 10px 0px 10px;
 }
-.CTAx{
-    border-top: 1px solid #47748b;
-
+.CTAx {
+  border-top: 1px solid #47748b;
 }
 ul.CTAx > li {
   display: flex;
@@ -248,7 +247,9 @@ li {
 .bg-gray {
   background-color: #d3d3d3;
 }
-
+.fs-10 {
+  font-size: 1rem !important;
+}
 .fs-09 {
   font-size: 0.9rem !important;
 }
@@ -360,7 +361,7 @@ li {
   left: 0px;
   top: 0px;
   height: 100%;
-  padding:  0px 10px 0px 0px;
+  padding: 0px 10px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

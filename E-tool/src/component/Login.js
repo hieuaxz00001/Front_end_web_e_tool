@@ -59,7 +59,7 @@ const Login = props => {
           <Form className='block-input' onSubmit={submitDisable}>
             <div className='input-header p-1 mt-4'>
               <div className='image-logo d-flex justify-content-center mb-4 mt-2'>
-                <img width={145} height={145} src={logo} alt='' />
+                <img width={145} height={165} src={logo} alt='' />
               </div>
             </div>
             <div className='input-content' style={{ padding: '0px 30px' }}>

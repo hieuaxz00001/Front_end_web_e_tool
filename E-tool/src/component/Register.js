@@ -108,7 +108,7 @@ export default class Register extends Component {
             >
               <div className='input-header p-1 mt-4'>
                 <div className='image-logo d-flex justify-content-center'>
-                <img width={145} height={145} src={logo} alt='' />
+                <img width={145} height={165} src={logo} alt='' />
                 </div>
               </div>
               <div className='input-content' style={{ padding: '0px 30px' }}>
@@ -209,7 +209,7 @@ export default class Register extends Component {
                   )}
                 </div>
                 <div className='input-group d-flex justify-content-end '>
-                  <Link to='/register' className='m-2'>
+                  <Link to='/login' className='m-2'>
                     Đã có tài khoản?
                   </Link>
                 </div>

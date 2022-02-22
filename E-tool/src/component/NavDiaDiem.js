@@ -51,8 +51,13 @@ const FormDiaDiem = props => {
           }}
         >
           <div className='block-dia-diem-header d-flex justify-content-between '>
-            <h6 className='ps-2 pt-2 fs-6 fw-bold'>{ten_nhom}</h6>
-            <i className='fas fa-align-left m-1 p-1 fs-5' />
+            <h6 className='ps-2 pt-2 fs-10 fw-bold'>{ten_nhom}</h6>
+            <button
+              className='btn btn-success fs-09 border-radius-20 pt-1 pb-1 ps-3 pe-3'
+              style={{ padding: '2px 10px' }}
+            >
+              Dự án mới
+            </button>
           </div>
           <hr className='m-0 me-1 ms-1 bg-success opacity-75' />
           <div className='block-dia-diem-content'>

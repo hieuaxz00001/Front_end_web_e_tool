@@ -109,15 +109,15 @@ a:focus {
 
 #sidebar ul.components {
   padding: 10px 0;
-  border-bottom: 1px solid #47748b;
-  margin: 0px 10px 0px 10px;
+  /* border-bottom: 1px solid #47748b; */
+  margin: 0px 10px 0px 0px;
 }
 
 #sidebar ul.components:nth-child(4) {
   border-bottom: unset !important;
 }
 
-#sidebar ul p {
+#sidebar > ul > p {
   color: #fff;
   padding: 10px;
 }
@@ -184,8 +184,7 @@ ul ul a {
   background: black;
 }
 
-ul.CTAs {
-  padding: 10px;
+.CTAs {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -195,13 +194,16 @@ ul.CTAs {
   width: 93%;
   margin: 0px 10px 0px 10px;
 }
+.CTAx{
+    border-top: 1px solid #47748b;
 
-ul.CTAs > li {
+}
+ul.CTAx > li {
   display: flex;
   align-items: baseline;
 }
 
-ul.CTAs > li > a {
+ul.CTAx > li > a {
   text-align: center;
   font-size: 0.9em !important;
   display: inline;
@@ -211,7 +213,7 @@ ul.CTAs > li > a {
   white-space: nowrap;
 }
 
-ul.CTAs > li > a:hover {
+ul.CTAx > li > a:hover {
   background: unset !important;
   color: black;
 }
@@ -358,7 +360,7 @@ li {
   left: 0px;
   top: 0px;
   height: 100%;
-  padding: 10px 10px;
+  padding:  0px 10px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,7 +381,7 @@ li {
 
 .block-control > ul > li > div {
   cursor: pointer;
-  width: 40px;
+  width: 100%;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,6 +402,7 @@ li {
 }
 
 .block-control > ul > li > div:hover {
-  background: rgba(189, 189, 189, 0.541);
-  border-radius: 10px;
+  background: rgba(248, 248, 248, 0.541);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

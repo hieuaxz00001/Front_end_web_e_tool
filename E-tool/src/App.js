@@ -6,6 +6,7 @@ import Login from './component/Login'
 import Register from './component/Register'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
+import NavLeft from './component/NavLeft'
 
 function App () {
   return (

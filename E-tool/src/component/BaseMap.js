@@ -12,7 +12,7 @@ import { getItemLocalStorage } from '../base/base'
 
 esriConfig.apiKey =
   'AAPKd1c0b29161f34f41b53daf85636e59926tzbgZr3Cvwf2gzqx0j8fclreeQvvlZURxiIXZQD4CpHQrLn9xTgBsMy-UO4YYhI'
-export const map = new Map({
+export var map = new Map({
   basemap: 'arcgis-topographic'
 })
 export var simpleMarkerSymbol = {
@@ -25,10 +25,21 @@ export var view = new MapView({
   center: [105.82972326668407, 20.992903563656817],
   container: 'viewDiv',
   map: map,
-  zoom: 9
+  zoom: 9,
+  popup: {
+    defaultPopupTemplateEnabled: false,
+    dockEnabled: true,
+    dockOptions: {
+      buttonEnabled: false,
+      breakpoint: false
+    },
+    autoOpenEnabled: false
+  }
 })
+export var graphicsLayer = new GraphicsLayer()
+
 const Basemap = props => {
-  const typeMap = useSelector(state => state.mapActive)
+  // const typeMap = useSelector(state => state.mapActive)
 
   // const latitude = useSelector(state => state.baseMap.lat)
   // const longitude = useSelector(state => state.baseMap.lon)
@@ -36,10 +47,9 @@ const Basemap = props => {
   const listPointPhieuKhaoSat = useSelector(
     state => state.baseMap.listPointKhaoSat
   )
-  const graphicsLayer = new GraphicsLayer()
   const [current_lat, setCurrent_lat] = useState('')
   const [current_lon, setCurrent_lon] = useState('')
- 
+
   const [showDialog, setShowDialog] = useState(false)
   const styles = {
     container: {
@@ -54,11 +64,20 @@ const Basemap = props => {
     }
   }
 
-  var handler = null
   // useEffect(() => {
   //   console.log(typeMap)
   // }, [typeMap])
   useEffect(() => {
+    map = new Map({
+      basemap: 'arcgis-topographic'
+    })
+    graphicsLayer = new GraphicsLayer()
+    simpleMarkerSymbol = {
+      type: 'picture-marker', // autocasts as new PictureMarkerSymbol()
+      url: markerr,
+      width: '30px',
+      height: '30px'
+    }
     view = new MapView({
       center: [105.82972326668407, 20.992903563656817],
       container: 'viewDiv',
@@ -125,10 +144,10 @@ const Basemap = props => {
       }
     }
   }, [listPointPhieuKhaoSat])
-  
+
   return (
     <div style={styles.container}>
-      <NavLeft visible={true} userLogin={userLogin}/>
+      <NavLeft visible={true} userLogin={userLogin} />
       <div className='position-absolute'>
         <FormKhaoSat visible={showDialog} lat={current_lat} lon={current_lon} />
       </div>

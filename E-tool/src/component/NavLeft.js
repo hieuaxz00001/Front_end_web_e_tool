@@ -12,10 +12,11 @@ import iconSetting from './../image/settings_100px.png'
 import iconThongTin from './../image/about_48px.png'
 import iconHoTro from './../image/help_60px.png'
 import { type } from '@testing-library/user-event/dist/type'
+import { getItemLocalStorage } from '../base/base'
 
 const NavLeft = props => {
   const [showDialogModal, setShowDialogModal] = useState(props.visible)
-  const [userLogin, setUserLogin] = useState(props.userLogin)
+  const [userLogin, setUserLogin] = useState(getItemLocalStorage('user'))
   const [showDuAn, setShowDuAnn] = useState(false)
   const [isLogout, setIsLogout] = useState(false)
   useEffect(() => {

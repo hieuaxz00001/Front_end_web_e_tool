@@ -50,9 +50,15 @@ const FormDiaDiem = props => {
             overflowY: 'unset'
           }}
         >
-          <div className='block-dia-diem-header d-flex justify-content-between '>
-            <h6 className='ps-2 pt-2 fs-6 fw-bold'>{ten_nhom}</h6>
-            <i className='fas fa-align-left m-1 p-1 fs-5' />
+          <div className='block-dia-diem-header d-flex justify-content-between mb-2'>
+            <h6 className='ps-2 pt-2 fs-10 fw-bold'>{ten_nhom}</h6>
+            <button
+              className='btn btn-success fs-08 border-radius-20 d-flex align-items-center'
+              style={{ padding: '1px 10px', lineHeight: '1.3' }}
+            >
+              <img className='me-1' src='https://img.icons8.com/fluency-systems-regular/20/ffffff/plus.png' />
+              <span>Thêm</span>
+            </button>
           </div>
           <hr className='m-0 me-1 ms-1 bg-success opacity-75' />
           <div className='block-dia-diem-content'>

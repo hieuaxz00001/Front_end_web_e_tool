@@ -13,6 +13,7 @@ import Basemap from './BaseMap'
 const Login = props => {
   const [username, setUsername] = useState('')
   const [pass, setPass] = useState('')
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const navigation = useNavigate()
   const submitDisable = event => {
@@ -31,7 +32,7 @@ const Login = props => {
           toast.success('Đăng nhập thành công')
           setItemLocalStorage('user', rs.data)
           setTimeout(() => {
-            navigation('/')
+           setIsSuccess(true)
           }, 1000)
         } else {
           toast.error('Đăng nhập thất bại')
@@ -51,6 +52,7 @@ const Login = props => {
   }
   return (
     <div className='container d-flex justify-content-center bg-blue w-100 h-100 p-0 align-items-center'>
+      {!isSuccess ? '' : <Navigate to='/' />}
       <div
         className='block-login shadow-lg rounded  d-flex col-8 bg-white'
         style={{ overflowY: 'auto', height: '550px' }}
@@ -59,7 +61,7 @@ const Login = props => {
           <Form className='block-input' onSubmit={submitDisable}>
             <div className='input-header p-1 mt-4'>
               <div className='image-logo d-flex justify-content-center mb-4 mt-2'>
-                <img width={145} height={145} src={logo} alt='' />
+                <img width={145} height={165} src={logo} alt='' />
               </div>
             </div>
             <div className='input-content' style={{ padding: '0px 30px' }}>

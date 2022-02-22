@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { renderIntoDocument } from 'react-dom/cjs/react-dom-test-utils.production.min'
 import { ajaxCallGet } from '../base/base'
 import FormDiaDiem from './NavDiaDiem'
 
@@ -48,8 +47,8 @@ const NavDuAn = props => {
     if (showDuAn) {
       return (
         <div
-          className='position-absolute bg-light h-100 '
-          style={{ zIndex: 1000, right: '0' }}
+          className='position-absolute bg-light h-100  bg-body rounded shadow'
+          style={{ zIndex: 1000, left: '101%' ,overflowY:'unset'}}
         >
           <div className='position-relative'>{renderFormDiaDiem()}</div>
 
@@ -118,7 +117,7 @@ const NavDuAn = props => {
         </div>
       )
     } else {
-      return <div></div>
+      return ''
     }
   }
   return renderUI()

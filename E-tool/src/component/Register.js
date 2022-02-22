@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import './../style/login.css'
-import placeholderPNG from './../image/placeholder.png'
+import logo from './../image/logo_etool_web.png'
 import { Form } from 'react-bootstrap'
 import Validator from './../utils/Validator'
-import { ajaxCallPost } from '../base/base'
+import { ajaxCallPost, setItemLocalStorage } from '../base/base'
 import { toast } from 'https://cdn.skypack.dev/wc-toast'
+import { Link, Navigate } from 'react-router-dom'
 export default class Register extends Component {
   constructor (props) {
     super(props)
@@ -15,47 +16,48 @@ export default class Register extends Component {
       pass: '',
       sdt: '',
       repass: '',
-      errors: {}
+      errors: {},
+      isSuccess: false
     }
     const requiredWith = (value, field, state) =>
       (!state[field] && !value) || !!value
     const rules = [
-      {
-        field: 'hoTen',
-        method: 'isEmpty',
-        validWhen: false,
-        message: 'Họ và tên là bắt buộc.'
-      },
-      {
-        field: 'gmail',
-        method: 'isEmail',
-        validWhen: true,
-        message: 'Sai định dạng email'
-      },
-      {
-        field: 'username',
-        method: 'isEmpty',
-        validWhen: false,
-        message: 'Username là bắt buộc'
-      },
-      {
-        field: 'pass',
-        method: 'isEmpty',
-        validWhen: false,
-        message: 'Mật khẩu là bắt buộc'
-      },
-      {
-        field: 'repass',
-        method: 'isEmpty',
-        validWhen: false,
-        message: 'Nhập lại mật khẩu.'
-      },
-      {
-        field: 'sdt',
-        method: 'isEmpty',
-        validWhen: false,
-        message: 'Số điện thoại là bắt buộc.'
-      }
+      // {
+      //   field: 'hoTen',
+      //   method: 'isEmpty',
+      //   validWhen: false,
+      //   message: 'Họ và tên là bắt buộc.'
+      // },
+      // {
+      //   field: 'gmail',
+      //   method: 'isEmail',
+      //   validWhen: true,
+      //   message: 'Sai định dạng email'
+      // },
+      // {
+      //   field: 'username',
+      //   method: 'isEmpty',
+      //   validWhen: false,
+      //   message: 'Username là bắt buộc'
+      // },
+      // {
+      //   field: 'pass',
+      //   method: 'isEmpty',
+      //   validWhen: false,
+      //   message: 'Mật khẩu là bắt buộc'
+      // },
+      // {
+      //   field: 'repass',
+      //   method: 'isEmpty',
+      //   validWhen: false,
+      //   message: 'Nhập lại mật khẩu.'
+      // },
+      // {
+      //   field: 'sdt',
+      //   method: 'isEmpty',
+      //   validWhen: false,
+      //   message: 'Số điện thoại là bắt buộc.'
+      // }
     ]
     this.validator = new Validator(rules)
   }
@@ -84,6 +86,10 @@ export default class Register extends Component {
     }
     ajaxCallPost('user', user).then(rs => {
       toast.success('Đăng ký tài khoản thành công')
+      this.setState({
+        isSuccess: true
+      })
+      setItemLocalStorage('user', rs.data)
     })
   }
 
@@ -102,9 +108,8 @@ export default class Register extends Component {
             >
               <div className='input-header p-1 mt-4'>
                 <div className='image-logo d-flex justify-content-center'>
-                  <img width={125} height={125} src={placeholderPNG} alt='' />
+                <img width={145} height={145} src={logo} alt='' />
                 </div>
-                <p className='text-center fs-2 m-0 text-green'>E-TOOL</p>
               </div>
               <div className='input-content' style={{ padding: '0px 30px' }}>
                 <div className='input-group '>
@@ -204,9 +209,9 @@ export default class Register extends Component {
                   )}
                 </div>
                 <div className='input-group d-flex justify-content-end '>
-                  <a href className='m-2'>
+                  <Link to='/register' className='m-2'>
                     Đã có tài khoản?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className='input-button p-1 d-flex justify-content-around'>
@@ -232,6 +237,11 @@ export default class Register extends Component {
             </div>
           </div>
         </div>
+        {!this.state.isSuccess ? (
+          ''
+        ) : (
+          <Navigate to='/' />
+        )}
       </div>
     )
   }

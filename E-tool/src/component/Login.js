@@ -32,7 +32,7 @@ const Login = props => {
           toast.success('Đăng nhập thành công')
           setItemLocalStorage('user', rs.data)
           setTimeout(() => {
-           setIsSuccess(true)
+            setIsSuccess(true)
           }, 1000)
         } else {
           toast.error('Đăng nhập thất bại')
@@ -55,62 +55,81 @@ const Login = props => {
       {!isSuccess ? '' : <Navigate to='/' />}
       <div
         className='block-login shadow-lg rounded  d-flex col-8 bg-white'
-        style={{ overflowY: 'auto', height: '550px' }}
+        style={{ overflowY: 'auto', height: '450px' }}
       >
-        <div className='block-login_left col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-6 col-lg-6'>
+        <div className='block-login_left col-12 col-sm-12 col-md-12 col-xl-5 col-xxl-5 col-lg-5'>
           <Form className='block-input' onSubmit={submitDisable}>
             <div className='input-header p-1 mt-4'>
               <div className='image-logo d-flex justify-content-center mb-4 mt-2'>
-                <img width={145} height={165} src={logo} alt='' />
+                <img width={125} height={145} src={logo} alt='' />
               </div>
             </div>
-            <div className='input-content' style={{ padding: '0px 30px' }}>
+            <div className='input-content' style={{ padding: '0px 50px' }}>
               <div className='input-group'>
                 <input
                   type='text'
-                  placeholder='Nhập username'
+                  placeholder='Nhập tài khoản'
                   name='username'
                   onChange={handleChangeUserName}
                   defaultValue={username}
-                  className='form-control m-2 border shadow-sm rounded'
+                  className='form-control m-2 border shadow-sm rounded fs-09'
                 />
               </div>
               <div className='input-group'>
                 <input
                   type='password'
-                  placeholder='Nhập password'
+                  placeholder='Nhập mật khẩu'
                   name='pass'
                   onChange={handleChangePass}
                   defaultValue={pass}
-                  className='form-control m-2 border shadow-sm rounded'
+                  className='form-control m-2 border shadow-sm rounded fs-09'
                 />
               </div>
 
               <div className='input-group d-flex justify-content-end '>
-                <Link to='/register' className='m-2'>
+                <Link to='/register' className='m-2 fs-08'>
                   Chưa có tài khoản?
                 </Link>
               </div>
-            </div>
-            <div className='input-button p-1 d-flex justify-content-around'>
-              <button className='btn btn-success' onClick={handleSubmit}>
-                Đăng nhập
-              </button>
-              <button className='btn btn-success' onClick={() => {}}>
-                Thoát
-              </button>
+              <div className='input-button p-1 d-flex justify-content-between'>
+                <button
+                  className='btn btn-success col-5 border-radius-20 fs-09'
+                  onClick={handleSubmit}
+                >
+                  Đăng nhập
+                </button>
+                <button
+                  className='btn btn-success  col-5 border-radius-20  fs-09'
+                  onClick={() => {}}
+                >
+                  Thoát
+                </button>
+              </div>
             </div>
           </Form>
         </div>
-        <div className='block-login_right  h-100 col-12 col-sm-12 col-md-12 col-xl-6 col-xxl-6 col-lg-6 d-flex align-items-center'>
-          <div className='content p-4'>
-            <p className='cl-white fs-5 ps-2 pe-2 text-start mb-0'>
-              Đánh giá cảm nhận về môi trường
-            </p>
-            <p className='cl-white fs-2 ps-2 pe-2 text-start fw-bold'>
-              Quản lý, giám sát, kịp thời dự báo, cảnh báo và công bố diễn biến
-              chất lượng môi trường
-            </p>
+        <div className='block-login_right  h-100 col-12 col-sm-12 col-md-12 col-xl-7 col-xxl-7 col-lg-7 d-flex align-items-center'>
+          <div
+            className='content p-4 '
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              justifyContent: 'center'
+            }}
+          >
+            <div className='col-9'>
+              <p className='cl-white fs-6 ps-2 pe-2 text-start mb-0 col-12'>
+                Đánh giá cảm nhận về môi trường
+              </p>
+              <p
+                className='cl-white fs-3 ps-2 pe-2 text-start fw-bold col-12'
+                style={{ lineHeight: '1.3' }}
+              >
+                Quản lý, giám sát, kịp thời dự báo, cảnh báo và công bố diễn
+                biến chất lượng môi trường
+              </p>
+            </div>
           </div>
         </div>
       </div>

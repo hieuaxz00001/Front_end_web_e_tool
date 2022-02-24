@@ -1,43 +1,39 @@
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { thayDoiMap } from '../action_reducer/TypeMapActiveActionReducer'
 
 const NavKieuBanDo = props => {
-  const [showKieuBanDo, setShowKieuBanDo] = useState(true)
+  const dispatch = useDispatch()
+
+  const [showKieuBanDo, setShowKieuBanDo] = useState(props.visible)
   const kieuMap = useSelector(state => state.typeMap)
-  console.log(kieuMap);
+  useEffect(() => {
+    setShowKieuBanDo(props.visible)
+  }, [props])
+  const handleChangeTypeMap = type => {
+    const action = thayDoiMap(type)
+    dispatch(action)
+  }
   const renderUI = () => {
     if (showKieuBanDo) {
       return (
         <div
-          className='position-absolute bg-light h-100 '
+          className='position-absolute bg-light shadow rounded'
           style={{ zIndex: 1000, left: '100%', overflowY: 'unset' }}
         >
           <div className='position-relative'></div>
 
           <nav
-            className='block-sidebar'
+            className='block-sidebar mb-4'
             id='side-control'
-            style={{ width: '300px' }}
+            style={{ width: '250px' }}
           >
             <div className='side-control-header d-flex fs-4 p-2 justify-content-between align-items-center'>
               <h6 className='m-0'>
-                <strong>Dự án</strong>
+                <strong>Kiểu bản đồ</strong>
               </h6>
-              <button
-                className='btn btn-success fs-09 border-radius-20 pt-1 pb-1 ps-3 pe-3'
-                style={{
-                  padding: '2px 10px',
-                  backgroundColor: '#35B14F!important'
-                }}
-              >
-                Dự án mới
-              </button>
             </div>
             <div className='side-control-body'>
-              <h6 className='bg-gray p-2 d-flex justify-content-between align-items-center fs-09'>
-                <span>Tệp dữ liệu</span>{' '}
-                <i className='far fa-file-alt fs-6 m-1' />
-              </h6>
               <ul className='pt-1 ps-3 pe-2'>
                 {kieuMap.listTypeMap.map(item => {
                   return (
@@ -47,16 +43,17 @@ const NavKieuBanDo = props => {
                           className='border rounder shadow-sm'
                           width={'50px'}
                           height={'50px'}
-                          src='https://cdn.tgdd.vn/Files/2020/11/10/1305861/googlemap_1280x720-800-resize.jpg'
+                          src={item.image}
                           alt=''
                         ></img>
-                        <p className='ms-2 mb-0 fw-bold'>Map 1</p>
+                        <p className='ms-2 mb-0 fw-bold'>{item.type}</p>
                       </div>
                       <div
                         className=' input-group me-2 '
                         style={{ width: 'auto' }}
                       >
                         <input
+                          onClick={() => handleChangeTypeMap(item.type)}
                           type={'radio'}
                           name='typeMap'
                           className='form-check-input shadow-sm'

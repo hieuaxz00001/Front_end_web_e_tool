@@ -4,16 +4,28 @@
 
 @import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
 body {
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
   background: #fafafa;
 }
-
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
 p {
-  font-family: 'Poppins', sans-serif;
-
   font-weight: 300;
   line-height: 1.7em;
   color: #999;
+}
+.btn-success {
+  background-color: #26bc50 !important;
 }
 
 a,
@@ -52,10 +64,8 @@ a:focus {
 
 #sidebar {
   width: 330px;
-  position: fixed;
-  top: 0;
-  left: -330px;
   height: 100vh;
+  display: none;
   z-index: 999;
   background: white;
   transition: all 0.3s;
@@ -63,7 +73,10 @@ a:focus {
 }
 
 #sidebar.active {
-  left: 0;
+  display: block;
+}
+#sidebar2.active {
+  display: flex;
 }
 
 #dismiss {
@@ -237,8 +250,7 @@ a.article:hover {
   right: 0;
 }
 
-.block-control {
-}
+
 ul,
 li {
   list-style: none;
@@ -276,6 +288,7 @@ li {
 .sidebar-header {
   padding: 10px 15px !important;
   background-image: url('./../image/Artboard 2.png') !important;
+  background-size: cover !important;
 }
 
 .header-nav-left {
@@ -292,8 +305,8 @@ li {
 }
 
 .header-nav-left > div:nth-child(1) > img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .header-nav-left-content {
@@ -323,8 +336,8 @@ li {
 }
 
 .body-nav-left > img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
 }
 
@@ -336,7 +349,6 @@ li {
 .body-nav-left > p:nth-child(2) {
   font-weight: 600 !important;
   font-size: 14px;
-  margin: 14px 0px 0px 0px;
 }
 
 .body-nav-left > p:nth-child(3) {
@@ -356,15 +368,10 @@ li {
 }
 
 .block-control {
-  position: absolute;
   z-index: 10;
-  left: 0px;
-  top: 0px;
   height: 100%;
   padding: 0px 10px 0px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -406,4 +413,57 @@ li {
   background: rgba(248, 248, 248, 0.541);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+ul.diadiem {
+}
+ul.diadiem li {
+}
+ul.diadiem li:hover {
+  background: rgb(241, 241, 241);
+  cursor: pointer;
+}
+ul.diadiem li > .left {
+}
+ul.diadiem li > .right {
+}
+.duan {
+}
+.duan > li {
+}
+.duan > li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.hover-icon:hover {
+  background-color: #dddbdb;
+  border-radius: 5px;
+}
+#blockA,
+#blockC,
+#blockB,
+#blockD input {
+}
+.form-control-customm {
+  font-size: 0.9rem !important;
+  padding: 5px 10px !important;
+}
+.table-infor-marker {
+}
+.table-infor-marker > thead {
+}
+.table-infor-marker > thead > tr {
+}
+.table-infor-marker > thead > tr > th {
+}
+.table-infor-marker > tbody {
+}
+.table-infor-marker > tbody > tr {
+}
+.table-infor-marker > tbody > tr > th {
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+.table-infor-marker > tbody > tr > td {
+  padding-top: 5px;
+  padding-bottom: 0px;
 }

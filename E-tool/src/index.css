@@ -11,14 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.my-modal {
-  width: 90vw!important;   /* Occupy the 90% of the screen width */
-  max-width: 90vw!important;
-} 
-.my-modal-phieu-ks {
-  width: 40vw!important;   /* Occupy the 90% of the screen width */
-  max-width: 40vw!important;
-} 
+
 .fas,.far{
   font-size: 0.9em;
 }

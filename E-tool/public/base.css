@@ -1,9 +1,20 @@
-.border-radius-20{
-    border-radius: 20px!important;
+.border-radius-20 {
+  border-radius: 20px !important;
 }
-.border-radius-10{
-    border-radius: 10px!important;
+.border-radius-10 {
+  border-radius: 10px !important;
 }
-.border-radius-05{
-    border-radius: 5px!important;
+.border-radius-05 {
+  border-radius: 5px !important;
+}
+.text-gr {
+  color: #686868 !important;
+}
+.my-modal {
+  width: 90vw !important; /* Occupy the 90% of the screen width */
+  max-width: 90vw !important;
+}
+.my-modal-phieu-ks {
+  width: 30vw !important; /* Occupy the 90% of the screen width */
+  max-width: 30vw !important;
 }

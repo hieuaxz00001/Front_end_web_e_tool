@@ -126,7 +126,8 @@ const FormKhaoSat = props => {
                     defaultValue={
                       khaoSat.diaDiem == null ? '' : khaoSat.diaDiem
                     }
-                    placeholder='Địa điểm'
+                    // placeholder='Địa điểm'
+                    placeholder='Place'
                     className='form-control-customm form-control'
                   />
                 </div>
@@ -143,7 +144,8 @@ const FormKhaoSat = props => {
                     defaultValue={
                       khaoSat.gioBatDau == null ? '' : khaoSat.gioBatDau
                     }
-                    placeholder='Ngày bắt đầu'
+                    // placeholder='Ngày bắt đầu'
+                    placeholder='Sunny/ Shade Day'
                     className='form-control-customm form-control'
                   />
                 </div>
@@ -160,7 +162,8 @@ const FormKhaoSat = props => {
                     defaultValue={
                       khaoSat.gioBatDau == null ? '' : khaoSat.gioBatDau
                     }
-                    placeholder='Giờ bắt đầu'
+                    // placeholder='Giờ bắt đầu'
+                    placeholder='Start time'
                     className='form-control-customm form-control'
                   />
                 </div>
@@ -177,7 +180,8 @@ const FormKhaoSat = props => {
                     defaultValue={
                       khaoSat.gioKetThuc == null ? '' : khaoSat.gioKetThuc
                     }
-                    placeholder='Giờ kết thúc'
+                    // placeholder='Giờ kết thúc'
+                    placeholder='End time'
                     className='form-control-customm form-control'
                   />
                 </div>
@@ -196,7 +200,8 @@ const FormKhaoSat = props => {
                         ? ''
                         : khaoSat.tenNguoiPhongVan
                     }
-                    placeholder='Tên người phỏng vấn'
+                    // placeholder='Tên người phỏng vấn'
+                    placeholder="Interviewer's name"
                     className='form-control-customm form-control'
                   />
                 </div>
@@ -213,7 +218,8 @@ const FormKhaoSat = props => {
               aria-controls=''
             >
               <h6 className='fw-bold mb-0 fs-09 text-dark'>
-                B. Thông tin người trả lời
+                {/* B. Thông tin người trả lời */}
+                B. Personal information 
               </h6>
               <i class='fas fa-angle-down fs-5 m-1'></i>
             </div>
@@ -224,70 +230,100 @@ const FormKhaoSat = props => {
             >
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  6. Họ và tên
+                  {/* 6. Họ và tên */}
+                  6. Respondent's full name
                 </label>
                 <div className='col-12'>
                   <input
                     type='text'
                     name=''
-                    placeholder='Họ và tên'
+                    // placeholder='Họ và tên'
+                    placeholder="Respondent's full name"
                     className='form-control-customm form-control'
                   />
                 </div>
               </div>
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  7. Giới tính
+                  {/* 7. Giới tính */}
+                  7. Gender
                 </label>
                 <div className='col-12'>
                   <select
                     className='form-select'
                     aria-label='Default select example'
                   >
-                    <option selected>Chọn giới tính</option>
-                    <option value={1}>Nam</option>
-                    <option value={2}>Nữ</option>
+                    <option selected>
+                      {/* Chọn giới tính */}
+                      Choose Gender
+                    </option>
+                    <option value={1}>
+                      {/* Nam */}
+                      Male
+                    </option>
+                    <option value={2}>
+                      {/* Nữ */}
+                      Femail
+                    </option>
                   </select>
                 </div>
               </div>
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  8. Độ tuổi
+                  {/* 8. Độ tuổi */}
+                  8. Age
                 </label>
                 <div className='col-12'>
                   <select
                     className='form-select'
                     aria-label='Default select example'
                   >
-                    <option selected>Chọn độ tuổi</option>
-                    <option value={0}>Dưới 10</option>
-                    <option value={0}>Từ 10 – 19</option>
-                    <option value={0}>Từ 30 – 39</option>
-                    <option value={0}>Từ 40 – 49</option>
-                    <option value={0}>Từ 50 – 59</option>
-                    <option value={0}>Từ 60 – 69</option>
-                    <option value={0}> Trên 70</option>
+                    <option selected>
+                      {/* Chọn độ tuổi */}
+                      Choose age
+                    </option>
+                    <option value={0}>
+                      {/* Dưới 10 */}
+                      Under 10
+                    </option>
+                    <option value={0}>10 – 19</option>
+                    <option value={0}>30 – 39</option>
+                    <option value={0}>40 – 49</option>
+                    <option value={0}>50 – 59</option>
+                    <option value={0}>60 – 69</option>
+                    <option value={0}>Over 70</option>
                   </select>
                 </div>
               </div>
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  9. Thời gian sinh sống tại khu vực
+                  {/* 9. Thời gian sinh sống tại khu vực */}
+                  9. Time lived in the area
                 </label>
                 <div className='col-12'>
                   <select
                     className='form-select'
                     aria-label='Default select example'
                   >
-                    <option selected>Chọn thời gian sinh sống</option>
-                    <option value={0}>Dưới 3 tháng </option>
-                    <option value={0}>Trên 3 tháng </option>
+                    <option selected>
+                      {/* Chọn thời gian sinh sống */}
+                      Choose time
+                    </option>
+                    <option value={0}>
+                      {/* Dưới 3 tháng  */}
+                      Less than 3 months                                           
+                    </option>
+                    <option value={0}>
+                      {/* Trên 3 tháng  */}
+                      More than 3 months
+                    </option>
                   </select>
                 </div>
               </div>
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  10. Quý vị đã làm gì trong phòng 15 phút vừa qua?
+                  {/* 10. Quý vị đã làm gì trong phòng 15 phút vừa qua? */}
+                  10. What have you been doing in your room the last 15 minutes?
                 </label>
                 <div className='col-12'>
                   <select
@@ -885,7 +921,8 @@ const FormKhaoSat = props => {
               </div>
               <div className='md-2 row'>
                 <label htmlFor='staticEmail' className='col-12 col-form-label'>
-                  27. Quý vị có muốn thay đổi gì không
+                  {/* 27. Quý vị có muốn thay đổi gì không */}
+                  27. Do you want to change anything ?
                 </label>
                 <div className='col-12'>
                   <select
@@ -961,7 +998,10 @@ const FormKhaoSat = props => {
                     className='form-select'
                     aria-label='Default select example'
                   >
-                    <option selected>Chọn </option>
+                    <option selected>
+                      {/* Chọn */}
+                      Choose
+                    </option>
                     <option>
                       {/* Công viên, vườn hoa, sân chơi có cây xanh, cỏ và có nước{' '} */}
                       Parks, flower gardens, playgrounds with trees, grass and water{' '}
@@ -1009,7 +1049,8 @@ const FormKhaoSat = props => {
           </div>
           <div className='col-12 d-flex justify-content-center mt-4'>
             <Button variant='primary' type='submit'>
-              Gửi khảo sát
+              {/* Gửi khảo sát */}
+              Submit
             </Button>
           </div>
         </Form>

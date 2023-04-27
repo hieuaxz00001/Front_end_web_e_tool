@@ -30,7 +30,8 @@ const NavKieuBanDo = props => {
           >
             <div className='side-control-header d-flex fs-4 p-2 justify-content-between align-items-center'>
               <h6 className='m-0'>
-                <strong>Kiểu bản đồ</strong>
+                {/* <strong>Kiểu bản đồ</strong> */}
+                <strong>Map style</strong>
               </h6>
             </div>
             <div className='side-control-body'>

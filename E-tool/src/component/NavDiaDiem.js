@@ -63,7 +63,7 @@ const FormDiaDiem = props => {
                 className='me-1'
                 src='https://img.icons8.com/fluency-systems-regular/15/ffffff/plus.png'
               />
-              <span className='fs-09'>Thêm</span>
+              <span className='fs-09'>ADD</span>
             </button>
           </div>
           <hr className='m-0 me-1 ms-1 bg-success opacity-75' />

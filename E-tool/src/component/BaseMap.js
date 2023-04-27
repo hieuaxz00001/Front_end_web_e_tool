@@ -279,7 +279,9 @@ export const FormInForMaker = props => {
                   src={markerr}
                   alt=''
                 />
-                <span>Môi trường</span>
+                {/* <span>Môi trường</span> */}
+                <span>Environment</span>
+
               </th>
               <th scope='col' className='text-start fs-09'>
                 <img
@@ -289,7 +291,8 @@ export const FormInForMaker = props => {
                   src={markerr}
                   alt=''
                 />
-                <span>Cộng đồng</span>
+                {/* <span>Cộng đồng</span> */}
+                <span>Community</span>
               </th>
             </tr>
           </thead>
@@ -299,11 +302,13 @@ export const FormInForMaker = props => {
                 className='text-start fs-08 ps-4'
                 style={{ fontWeight: 600, color: '#686868' }}
               >
-                <span>Nhiệt độ:</span>
+                {/* <span>Nhiệt độ:</span> */}
+                <span>Temperature</span>
                 <span>{props.id}</span>
               </th>
               <td className='text-start fs-08 ps-4'>
-                <span>Chế độ quần áo:</span>
+                {/* <span>Chế độ quần áo:</span> */}
+                <span>Clothes mode</span>
                 <span></span>
               </td>
             </tr>
@@ -316,7 +321,8 @@ export const FormInForMaker = props => {
                 <span></span>
               </th>
               <td className='text-start fs-08 ps-4'>
-                <span>Mức độ tiện nghi nhiệt:</span>
+                {/* <span>Mức độ tiện nghi nhiệt:</span> */}
+                <span>Thermal comfort level</span>
                 <span></span>
               </td>
             </tr>
@@ -325,11 +331,13 @@ export const FormInForMaker = props => {
                 className='text-start fs-08 ps-4'
                 style={{ fontWeight: 600, color: '#686868' }}
               >
-                <span>Nắng:</span>
+                {/* <span>Nắng:</span> */}
+                <span>Sunny</span>
                 <span></span>
               </th>
               <td className='text-start fs-08 ps-4'>
-                <span>Tình trạng sức khỏe:</span>
+                {/* <span>Tình trạng sức khỏe:</span> */}
+                <span>Health status</span>
                 <span></span>
               </td>
             </tr>
@@ -338,11 +346,13 @@ export const FormInForMaker = props => {
                 className='text-start fs-08 ps-4'
                 style={{ fontWeight: 600, color: '#686868' }}
               >
-                <span>Độ ẩm:</span>
+                {/* <span>Độ ẩm:</span> */}
+                <span>humidity</span>
                 <span></span>
               </th>
               <td className='text-start fs-08 ps-4'>
-                <span>Môi trường nhiệt:</span>
+                {/* <span>Môi trường nhiệt:</span> */}
+                <span>Thermal environment</span>
                 <span></span>
               </td>
             </tr>
@@ -351,7 +361,8 @@ export const FormInForMaker = props => {
                 className='text-start fs-08 ps-4'
                 style={{ fontWeight: 600, color: '#686868' }}
               >
-                <span>Cây xanh, thảm cỏ:</span>
+                {/* <span>Cây xanh, thảm cỏ:</span> */}
+                <span>Green trees, grass</span>
                 <span></span>
               </th>
               <td className='text-start fs-08 ps-4'>

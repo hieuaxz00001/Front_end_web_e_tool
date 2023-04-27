@@ -83,8 +83,10 @@ const NavLeft = props => {
                   <img width={70} height={70} src={imgLogo} alt='' />
                 </div>
                 <div className='header-nav-left-content'>
-                  <span>Đánh giá, cảm nhận về môi trường</span>
-                  <span>Khảo sát môi trường thực</span>
+                  {/* <span>Đánh giá, cảm nhận về môi trường</span>
+                  <span>Khảo sát môi trường thực</span> */}
+                  <span>Evaluate and feel about the environment</span>
+                  <span>Real environment survey</span>
                 </div>
               </div>
               <div className='body-nav-left'>
@@ -97,7 +99,7 @@ const NavLeft = props => {
                   style={{ color: '#00FF91' }}
                   onClick={() => logOut()}
                 >
-                  Đăng xuất
+                  Logout
                 </p>
               </div>
             </div>
@@ -111,7 +113,9 @@ const NavLeft = props => {
                     src={iconSearch}
                     alt=''
                   />
-                  <span>Tìm kiếm</span>
+                  {/* <span>Tìm kiếm</span> */}
+                  <span>Search</span>
+
                 </a>
               </li>
               <li onClick={() => handleShowDuAn()}>
@@ -123,7 +127,7 @@ const NavLeft = props => {
                     src={iconDuAn}
                     alt=''
                   />
-                  <span>Dự án</span>
+                  <span>Project</span>
                 </a>
               </li>
               <li onClick={() => handleShowTypeMap()}>
@@ -135,7 +139,9 @@ const NavLeft = props => {
                     src={iconKieuMap}
                     alt=''
                   />
-                  <span>Kiểu bản đồ</span>
+                  {/* <span>Kiểu bản đồ</span> */}
+                  <span>Map style</span>
+
                 </a>
               </li>
               <li>
@@ -147,7 +153,9 @@ const NavLeft = props => {
                     src={iconUser}
                     alt=''
                   />
-                  <span>Quản lý người dùng</span>
+                  {/* <span>Quản lý người dùng</span> */}
+                  <span>Account</span>
+
                 </a>
               </li>
               <li>
@@ -159,7 +167,9 @@ const NavLeft = props => {
                     src={iconSetting}
                     alt=''
                   />
-                  <span>Cài đặt</span>
+                  {/* <span>Cài đặt</span> */}
+                  <span>Setting</span>
+
                 </a>
               </li>
             </ul>
@@ -174,7 +184,7 @@ const NavLeft = props => {
                       src={iconThongTin}
                       alt=''
                     />
-                    <span>Thông tin</span>
+                    <span>Information</span>
                   </a>
                 </li>
                 <li>
@@ -186,7 +196,7 @@ const NavLeft = props => {
                       src={iconHoTro}
                       alt=''
                     />
-                    <span>Hỗ trợ</span>
+                    <span>Support</span>
                   </a>
                 </li>
               </ul>

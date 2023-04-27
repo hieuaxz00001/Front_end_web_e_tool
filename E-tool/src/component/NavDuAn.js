@@ -75,7 +75,7 @@ const NavDuAn = props => {
           >
             <div className='side-control-header d-flex fs-4 p-2 justify-content-between align-items-center'>
               <h6 className='m-0 text-gr'>
-                <strong>Dự án</strong>
+                <strong>Project</strong>
               </h6>
               <button
                 className='btn btn-success fs-09 border-radius-10 pt-1 pb-1 ps-3 pe-3  '
@@ -84,12 +84,12 @@ const NavDuAn = props => {
                   backgroundColor: '#35B14F!important'
                 }}
               >
-                Dự án mới
+                New project
               </button>
             </div>
             <div className='side-control-body'>
               <h6 className='bg-gray p-2 d-flex justify-content-between align-items-center fs-09 text-gr'>
-                <span>Tệp dữ liệu</span>{' '}
+                <span>Data</span>{' '}
                 <img
                   className='me-1'
                   width={17}

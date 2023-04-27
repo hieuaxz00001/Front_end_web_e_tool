@@ -68,7 +68,7 @@ const Register2 = () => {
     }
     console.log(user)
     ajaxCallPost('user', user).then(rs => {
-      toast.success('Đăng ký tài khoản thành công')
+      toast.success('Successful account registration')
       setState({
         isSuccess: true
       })
@@ -100,7 +100,7 @@ const Register2 = () => {
                   value={state.hoTen}
                   onChange={handleChange}
                   required
-                  placeholder='Họ và tên'
+                  placeholder='Fullname'
                   className='form-control  m-2 border shadow-sm rounded fs-09'
                 />
               </div>
@@ -110,14 +110,14 @@ const Register2 = () => {
                   name='gmail'
                   value={state.gmail}
                   onChange={handleChange}
-                  placeholder='Nhập gmail'
+                  placeholder='Email'
                   className='form-control m-2 border shadow-sm rounded fs-09'
                 />
               </div>
               <div className='input-group'>
                 <input
                   type='text'
-                  placeholder='Nhập số điện thoại'
+                  placeholder='Number phone'
                   name='sdt'
                   value={state.sdt}
                   onChange={handleChange}
@@ -138,7 +138,7 @@ const Register2 = () => {
               <div className='input-group'>
                 <input
                   type='password'
-                  placeholder='Nhập mật khẩu'
+                  placeholder='Enter password'
                   name='password'
                   required
                   value={state.password}
@@ -153,13 +153,13 @@ const Register2 = () => {
                   required
                   value={state.repassword}
                   onChange={handleChange}
-                  placeholder='Nhập lại password'
+                  placeholder='Enter again password'
                   className='form-control m-2 border shadow-sm rounded fs-09'
                 />
               </div>
               <div className='input-group d-flex justify-content-end '>
                 <Link to='/login' className='m-2 fs-08'>
-                  Đã có tài khoản?
+                  Have an account?
                 </Link>
               </div>
               <div className='input-button p-1 d-flex justify-content-between'>
@@ -168,10 +168,10 @@ const Register2 = () => {
                   className='btn btn-success col-5 border-radius-20 fs-09'
                   onClick={handleSubmit.bind(this)}
                 >
-                  Đăng ký
+                  Register
                 </button>
                 <button className='btn btn-success border-radius-20 col-5 fs-09'>
-                  Thoát
+                  Exit
                 </button>
               </div>
             </div>
@@ -189,14 +189,14 @@ const Register2 = () => {
           >
             <div className='col-9'>
               <p className='cl-white fs-6 ps-2 pe-2 text-start mb-0 col-12'>
-                Đánh giá cảm nhận về môi trường
+              Assessment of the perception of the environment
               </p>
               <p
                 className='cl-white fs-3 ps-2 pe-2 text-start fw-bold col-12'
                 style={{ lineHeight: '1.3' }}
               >
-                Quản lý, giám sát, kịp thời dự báo, cảnh báo và công bố diễn
-                biến chất lượng môi trường
+                Manage, monitor, timely forecast, warn and announce performances
+                 environmental quality variable
               </p>
             </div>
           </div>

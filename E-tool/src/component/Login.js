@@ -29,18 +29,18 @@ const Login = props => {
       .then(rs => {
         console.log(rs)
         if (rs.data != null) {
-          toast.success('Đăng nhập thành công')
+          toast.success('Login success')
           setItemLocalStorage('user', rs.data)
           setTimeout(() => {
             setIsSuccess(true)
           }, 1000)
         } else {
-          toast.error('Đăng nhập thất bại')
+          toast.error('Login fail')
         }
       })
       .catch(err => {
         console.log(err)
-        toast.error('Đăng nhập thất bại')
+        toast.error('Login fail')
       })
   }
   const handleChangeUserName = event => {
@@ -68,7 +68,7 @@ const Login = props => {
               <div className='input-group'>
                 <input
                   type='text'
-                  placeholder='Nhập tài khoản'
+                  placeholder='Enter username'
                   name='username'
                   onChange={handleChangeUserName}
                   defaultValue={username}
@@ -78,7 +78,7 @@ const Login = props => {
               <div className='input-group'>
                 <input
                   type='password'
-                  placeholder='Nhập mật khẩu'
+                  placeholder='Enter password'
                   name='pass'
                   onChange={handleChangePass}
                   defaultValue={pass}
@@ -88,7 +88,7 @@ const Login = props => {
 
               <div className='input-group d-flex justify-content-end '>
                 <Link to='/register' className='m-2 fs-08'>
-                  Chưa có tài khoản?
+                  Forgot password?
                 </Link>
               </div>
               <div className='input-button p-1 d-flex justify-content-between'>
@@ -96,13 +96,13 @@ const Login = props => {
                   className='btn btn-success col-5 border-radius-20 fs-09'
                   onClick={handleSubmit}
                 >
-                  Đăng nhập
+                  Login
                 </button>
                 <button
                   className='btn btn-success  col-5 border-radius-20  fs-09'
                   onClick={() => {}}
                 >
-                  Thoát
+                  Exit
                 </button>
               </div>
             </div>
@@ -120,14 +120,14 @@ const Login = props => {
           >
             <div className='col-9'>
               <p className='cl-white fs-6 ps-2 pe-2 text-start mb-0 col-12'>
-                Đánh giá cảm nhận về môi trường
+              Assessment of the perception of the environment
               </p>
               <p
                 className='cl-white fs-3 ps-2 pe-2 text-start fw-bold col-12'
                 style={{ lineHeight: '1.3' }}
               >
-                Quản lý, giám sát, kịp thời dự báo, cảnh báo và công bố diễn
-                biến chất lượng môi trường
+                Manage, monitor, timely forecast, warn and announce performances
+                 environmental quality variable
               </p>
             </div>
           </div>
